@@ -15,11 +15,11 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 全功能
+    details: 除了启动外,还支持多种登录方式,原版与其他加载器的安装,整合包解析还有很多封装好的小工具
+  - title: 模块化
+    details: 主要有启动、安装、验证与工具集，模块化的核心使您的使用更加简单
+  - title: 全开源
+    details: 您可以在 Github 上查看完全开放的源代码,使用GPL-3.0协议,您可以参考学习等
 ---
 
