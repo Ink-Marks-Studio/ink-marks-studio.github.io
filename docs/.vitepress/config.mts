@@ -26,10 +26,25 @@ export default defineConfig({
       {
         text: '关于',
         items: [
-          { text: '介绍', link: '/markdown-examples' },
-          { text: '快速开始', link: '/api-examples' }
-        ]
-      }
+          { text: '介绍', link: '/About/Introduction' },
+          { text: '快速开始', link: '/About/QuickStart' }
+        ],
+      },
+      {
+        text: '启动器',
+        items: [
+          { text: '启动器', link: '/Launcher/' }
+        ],
+      },
+      {
+        text: '验证器',
+        items: [
+          { text: '微软验证', link: '/Authentication/' },
+          { text: '外置验证', link: '/Authentication/' },
+          { text: '离线验证', link: '/Authentication/' },
+          { text: '统一通行证', link: '/Authentication/UnifiedPassAuthenticator' }
+        ],
+      },
     ],
 
     socialLinks: [
