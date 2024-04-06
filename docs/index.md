@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /markdown-examples
+      link: /About/Introduction
     - theme: alt
       text: 常见问题
-      link: /api-examples
+      link: /About/Introduction
 
 features:
   - title: 全功能

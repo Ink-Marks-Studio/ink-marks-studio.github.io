@@ -22,6 +22,8 @@ public MinecraftLauncher(LaunchConfig launchConfig)
 
 <br>
 
+## 参数讲解 
+
 ### 详细 `LaunchConfig` 定义
 
 ```csharp
@@ -102,4 +104,12 @@ public class JavaConfig
     
     public IEnumerable<string> GCArguments { get; set; } // 附加 GC 参数
 }
+```
+
+## 方法参考
+
+``LaunchAsync`` 异步启动方法
+
+```csharp
+public async Task<LaunchResponse> LaunchAsync(Action<ProgressReport> onProgressChanged)
 ```
