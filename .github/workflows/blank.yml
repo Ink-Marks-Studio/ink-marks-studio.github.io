@@ -19,6 +19,7 @@ jobs:
   # 构建工作
   build:
     runs-on: ubuntu-latest
+    name: 构建
     steps:
       - name: 签出代码
         uses: actions/checkout@v4
