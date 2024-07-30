@@ -113,3 +113,44 @@ public class JavaConfig
 ```csharp
 public async Task<LaunchResponse> LaunchAsync(Action<ProgressReport> onProgressChanged)
 ```
+
+| 参数                | 类型                       | 描述     |
+|-------------------|--------------------------|--------|
+| onProgressChanged | Action\<ProgressReport\> | 启动进度报告 |
+
+## 控制台示例
+
+```csharp
+LaunchConfig args = new() // 配置启动参数
+{
+    Account = new()
+    {
+        BaseAccount = account // 账户
+    },
+    GameCoreConfig = new()
+    {
+        Root = ".minecraft", // 游戏根目录(可以是绝对的也可以是相对的,自动判断)
+        Version = "1.18.2", // 启动的版本
+        IsVersionIsolation = true, //版本隔离
+        Nide8authPath = ".minecraft\\nide8auth.jar", // 只有统一通行证需要
+        UnifiedPassServerId = "xxxxxxxxxxxxxxxxxx" // 同上
+    },
+    JavaConfig = new()
+    {
+        JavaPath = "xxxxxxxxxxxxxxxxxxx", // Java 路径(绝对路径)
+        MaxMemory = 16384,
+        MinMemory = 1000
+    }
+};
+var launch = new MinecraftLauncher(args); // 实例化启动器
+var la = await launch.LaunchAsync(ReportProgress); // 启动
+                
+// 日志输出
+la.ErrorReceived += (output) => Console.WriteLine($"{output}");
+la.OutputReceived += (output) => Console.WriteLine($"{output}");
+                
+if (la.Status == Status.Succeeded)
+{
+    // 启动成功执行操作
+}
+```
